@@ -1,0 +1,696 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: "Baloo Da 2",cursive;
+    text-decoration: none;
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.section1{
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/dark-bg.jpeg");
+    background-size: cover;
+    position: relative;
+}
+
+.banner{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top: 20%;
+    text-align: center;
+}
+
+.part1h{
+    height: 20rem;
+    margin-bottom: 4rem;
+}
+
+
+.part1h span{
+    font-family: "Oswald",sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
+    font-size:12rem;
+    position: absolute;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    letter-spacing: 3re;
+    transform: translateZ(8rem);
+    opacity: 0;
+}
+
+.heading-1 {
+    animation: animateHeading 12s 3s infinite;
+  }
+  
+  .heading-2 {
+    animation: animateHeading 12s 6s infinite;
+  }
+  
+  .heading-3 {
+    animation: animateHeading 12s 9s infinite;
+  }
+  
+  .heading-4 {
+    animation: animateHeading 12s 12s infinite;
+  }
+  
+  @keyframes animateHeading {
+    0% {
+      transform: translateZ(8rem);
+      opacity: 0;
+      letter-spacing: 3rem;
+    }
+    3% {
+      transform: translateZ(0);
+      opacity: 1;
+      letter-spacing: 1.5rem;
+    }
+    25% {
+      transform: translateZ(0);
+      opacity: 1;
+      letter-spacing: 1.5rem;
+    }
+    28% {
+      transform: translateZ(8rem);
+      opacity: 0;
+      letter-spacing: 3rem;
+    }
+    100% {
+      transform: translateZ(8rem);
+      opacity: 0;
+      letter-spacing: 3rem;
+    }
+  }
+
+.banner p{
+    font-size: 4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.btn1{
+    width: 30rem;
+    height: 6rem;
+    background: linear-gradient(to right, #9b0e0e, #7a1010);
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-radius: 3rem;
+    border: 0.1rem solid #800505;
+    box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.5);
+    text-shadow: 0.6rem 0.3rem 0.2rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    margin-top: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn1::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #fff, transparent);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transform: skewX(-30deg);
+    transition: left 0.5s;
+  }
+  
+  .btn1:hover::before {
+    left: 100%;
+  }
+  
+  @keyframes fadeAnimation {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  nav{
+    background-color: black;
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    transition: 0.8s;
+    padding-left: 3rem;
+    position: fixed;
+    z-index: 100;
+  }
+
+.message{
+  margin-top: 2rem;
+}
+
+  .m1{
+    font-family: "MADE Soulmaze", sans-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #9e0e09;
+  }
+
+  .m2{
+    font-family: "MADE Soulmaze", sans-serif;
+    font-size: 2.5rem;
+    color: #eee;
+    letter-spacing: 0.1rem;
+  }
+
+  .menu {
+    width: 4rem;
+    height: 4rem;
+    position: fixed;
+    top: 2rem;
+    right: 4rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+  }
+  
+
+  .line1{
+    background-color: #fff;
+    height: 0.2rem;
+    z-index: 101;
+    width: 55%;
+    transition: 0.2s;
+  }
+
+  .line2{
+    background-color: #fff;
+    height: 0.2rem;
+    z-index: 101;
+    width: 100%;
+  }
+
+  .line3{
+    background-color: #fff;
+    height: 0.2rem;
+    z-index: 101;
+    width: 55%;
+    margin-left: 45%;
+    transition: 0.2s;
+  }
+
+ .change1{
+    rotate: 35deg;
+    margin-left: 55%;
+    margin-bottom: -0.9rem;
+    width:45%;
+  }
+  .change2{
+    rotate: -35deg;
+    margin-top: -0.9rem;
+    margin-left: 55%;
+    width:45%;
+}
+
+.change3{
+  height: 100vh;
+}
+
+.nav-list {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  z-index: 200;
+}
+
+.change4{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.nav-link {
+  font-family: "MADE Soulmaze", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.3rem;
+  color: #fff;
+  margin: 2rem 0;
+  transition: color 0.4s;
+}
+
+.section2{
+  width: 100%;
+  height: 115vh;
+  background-color: #222020;
+  display: flex;
+  align-items: center;
+  padding: 0 10rem;
+  position: relative;
+}
+
+.sec-h{
+  font-family: "Oswald", sans-serif;
+  font-size: 10rem;
+  font-weight: 300;
+  color: #ddd;
+  margin-right: 4rem;
+}
+
+.about-line{
+  width: 15rem;
+  height: 0.2rem;
+  background-color: #ddd;
+}
+
+.vid{
+  width: 75rem;
+  height: 40rem;
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.video-bar-wrapper {
+  width: 100%;
+  height: 0.7rem;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.controls {
+  width: 100%;
+  position: absolute;
+  bottom: 0rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateY(calc(100% - 0.4rem));
+  transition: transform 2s;
+}
+
+.vid:hover .controls {
+  transform: translateY(0);
+}
+
+.controls:hover .controls {
+  transform: translateY(0);
+}
+
+.video:hover .controls {
+  transform: translateY(0);
+}
+
+.buttons:hover .controls {
+  transform: translateY(0);
+}
+
+.video-bar {
+  height: 100%;
+  width: 0;
+  background-color: #d30819;
+  transition: width 0.2s linear;
+}
+
+.buttons {
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons i {
+  font-size: 2.8rem;
+  color: #fff;
+}
+
+.sec2p{
+  width: 75rem;
+  position: absolute;
+  margin-bottom: -2rem;
+  bottom: 10rem;
+  right: 5rem;
+  font-size: 2rem;
+  color: #ddd;
+  border-top: 0.3rem double #aaa;
+  border-bottom: 0.3rem double #aaa;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.7);
+  line-height: 1.5;
+}
+
+.fa-quote-left {
+  align-self: flex-start;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.fa-quote-right {
+  align-self: flex-end;
+  font-size: 5rem;
+  margin-top: -2rem;
+}
+
+.section-3 {
+  width: 100%;
+  height: 100vh;
+  background-color: #03070e;
+  display: flex;
+  align-items: center;
+  padding-left: 10rem;
+  margin-top: -0.2rem;
+}
+
+.pricing-cards-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem;
+  perspective: 1000px;
+}
+
+.pricing-card {
+  width: 28rem !important;
+  height: 45rem !important;
+  background-color: #181b1d;
+  border-radius: 1rem;
+  box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.7);
+  position: relative;
+  backface-visibility: hidden;
+}
+
+.pricing-card-front {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transform: rotateY(180deg);
+  position: absolute;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.section-heading-line {
+    width: 10rem;
+    height: 0.2rem;
+    background-color: #ddd;
+  transform: translate(36rem,36rem);
+}
+
+.pricing-card-heading {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.heading-free {
+  background: linear-gradient(to right, #087285, #0da5d3);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.heading-basic {
+  background: linear-gradient(to right, #946809, #bdba0e);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.heading-standard {
+  background: linear-gradient(to right, #a10c14, #e23b3b);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.heading-premium {
+  background: linear-gradient(to right, #0b7e48, #3be286);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.pricing-card-price {
+  font-family: "MADE Soulmaze", sans-serif;
+  font-size: 7rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.pricing-card-list li {
+  margin-bottom: 0.5rem;
+}
+
+.list-free li {
+  color: #0da5d3;
+}
+
+.list-basic li {
+  color: #bdba0e;
+}
+
+.list-standard li {
+  color: #e23b3b;
+}
+
+.list-premium li {
+  color: #3be286;
+}
+
+.pricing-card-list i {
+  font-size: 1.8rem;
+  width: 3rem;
+}
+
+.pricing-card-list span {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+
+.pricing-card-btn {
+  width: 18rem;
+  height: 5rem;
+  margin-bottom: 3rem;
+  border-radius: 3rem;
+  border: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
+}
+
+.btn-free {
+  background-color: #0da5d3;
+}
+
+.btn-basic {
+  background-color: #bdba0e;
+}
+
+.btn-standard {
+  background-color: #e23b3b;
+}
+
+.btn-premium {
+  background-color: #3be286;
+}
+
+.pricing-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.back-free {
+  background: linear-gradient(to right, #087285, #0da5d3);
+}
+
+.back-basic {
+  background: linear-gradient(to right, #946809, #bdba0e);
+}
+
+.back-standard {
+  background: linear-gradient(to right, #a10c14, #e23b3b);
+}
+
+.back-premium {
+  background: linear-gradient(to right, #0b7e48, #3be286);
+}
+
+.pricing-card-back a {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.section4 {
+  width: 100%;
+  height: 100vh;
+  background-color: #171718;
+  display: flex;
+  align-items: center;
+  padding: 0 10rem;
+  padding-bottom: 10rem;
+  margin-top: -1rem;
+}
+
+.sec4-wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.icons{
+  display: flex;
+  padding-bottom:1rem;
+  margin-bottom: 1rem;
+}
+
+.pre-icon{
+  width: 25rem;
+  text-align: center;
+  margin: 4rem;
+}
+
+.pre-icon i{
+  font-size: 5rem;
+  color: #7a1010;
+}
+
+.icons h3 {
+  font-family: "MADE Soulmaze", sans-serif;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  color: #ccc;
+}
+
+.icons p {
+  font-size: 1.6rem;
+  color: #aaa;
+}
+
+.contact-line{
+  background-color: #ddd;
+  width: 12rem;
+  height: 0.2rem;
+  transform: translate(38rem,30rem);
+}
+
+.sec4-wrapper h1 {
+  font-size: 4rem;
+  color: #ccc;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.contact-form {
+  width: 70rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1.5rem;
+  background-color: #444;
+  color: #eee;
+  border: none;
+  margin-bottom: 2rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+
+.contact-form textarea {
+  max-width: 100%;
+  max-height: 15rem;
+  min-height: 5.5rem;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #7a1010;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #5f0303;
+}
+
+.footer {
+  width: 100%;
+  height: 12rem;
+  background-color: #202122;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+}
+
+.footer-nav a {
+  font-family: "MADE Soulmaze", sans-serif;
+  font-size: 2rem;
+  color: #ccc;
+  margin-right: 3rem;
+  letter-spacing: 0.1rem;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #862323;
+}
+
+.copyright {
+  font-size: 2rem;
+  color: #ddd;
+}
